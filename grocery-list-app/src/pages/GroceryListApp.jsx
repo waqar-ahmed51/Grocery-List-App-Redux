@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HeadTitle from "../components/HeadTitle";
-import TotalItem from "../components/TotalItem";
+import TotalItems from "../components/TotalItems";
 
 const Container = styled.div`
   width: 100vw;
@@ -16,7 +16,7 @@ const GroceryListApp = () => {
   return (
     <Container>
       <HeadTitle />
-      <TotalItem />
+      <TotalItems />
     </Container>
   );
 };

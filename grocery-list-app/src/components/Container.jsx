@@ -10,7 +10,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
 const TotalItem = () => {
   return (
     <Container>
@@ -18,5 +17,4 @@ const TotalItem = () => {
     </Container>
   );
 };
-
 export default TotalItem;

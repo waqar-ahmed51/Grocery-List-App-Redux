@@ -10,32 +10,28 @@ const Container = styled.div`
   height: 30px;
   display: flex;
 `;
-const Text = styled.div`
-  flex: 1;
+const ItemText = styled.div`
+  flex: 8;
   padding-left: 20px;
   background-color: blue;
   display: flex;
   font-size: 20px;
 `;
-const CartNumber = styled.div`
+const ButtonPurchased = styled.button`
   background-color: green;
-  padding-right: 20px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   flex: 1;
+  align-items: center;
 `;
 
-const TotalItems = () => {
+const ListItems = () => {
   return (
     <Container>
-      <Text>Total Items to be purchsed from market</Text>
-      <CartNumber>
-        <Badge badgeContent={4} color="primary">
-          <ReorderIcon color="action" />
-        </Badge>
-      </CartNumber>
+      <ItemText>Total Items to be purchsed from market</ItemText>
+      <ButtonPurchased>Purchased</ButtonPurchased>
     </Container>
   );
 };
 
-export default TotalItems;
+export default ListItems;

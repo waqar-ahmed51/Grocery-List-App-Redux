@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const Wrapper = styled.div`
   background-color: yellowgreen;
   width: 70%;
@@ -15,7 +14,7 @@ const Wrapper = styled.div`
 const HeadTitle = () => {
   return (
     <Wrapper>
-      <h1>Grocery List App</h1>
+      <h1>GROCERY LIST APP</h1>
     </Wrapper>
   );
 };

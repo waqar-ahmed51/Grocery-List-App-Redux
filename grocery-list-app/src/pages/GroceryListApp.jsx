@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import HeadTitle from "../components/HeadTitle";
 import TotalItems from "../components/TotalItems";
+import AddItem from "../components/AddItem";
+import ListItem from "../components/ListItem";
 
 const Container = styled.div`
   width: 100vw;
@@ -17,6 +19,8 @@ const GroceryListApp = () => {
     <Container>
       <HeadTitle />
       <TotalItems />
+      <AddItem />
+      <ListItem />
     </Container>
   );
 };

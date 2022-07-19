@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Badge } from "@mui/material";
 import ReorderIcon from "@mui/icons-material/Reorder";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../actions";
 
 const Container = styled.div`
   width: 70%;
   padding: 10px 0px;
   height: 30px;
   display: flex;
-
   margin-top: 10px;
   border-bottom: 1px solid black;
 `;
@@ -34,6 +34,7 @@ const TotalItems = () => {
   return (
     <Container>
       <Text>Total Items to be purchsed from market</Text>
+      <button onClick={() => dispatch(addItem())}>+</button>
       <CartNumber>
         <Badge badgeContent={groceryItemReducer} color="primary">
           <ReorderIcon color="action" />

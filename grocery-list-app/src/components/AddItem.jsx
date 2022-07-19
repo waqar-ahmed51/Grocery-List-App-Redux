@@ -2,31 +2,43 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: red;
+  /* background-color: red; */
   width: 70%;
-  padding: 10px 0px;
+  padding: 20px 0px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid black;
 `;
 
 const AddButton = styled.button`
   flex: 2;
-  font-size: 40px;
-  padding: 20px;
+  font-size: 25px;
+  padding: 5px 0px;
+  margin-right: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+  }
 `;
 
 const InputItem = styled.input`
   flex: 6;
   margin: 0 20px;
+  font-size: 25px;
 `;
 
 const AddItem = () => {
   return (
     <Container>
       <InputItem />
-      <AddButton>Add</AddButton>
+      <AddButton>ADD</AddButton>
     </Container>
   );
 };

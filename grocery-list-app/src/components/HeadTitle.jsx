@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: yellowgreen;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   width: 70%;
   padding: 20px 0px;
   height: 30px;

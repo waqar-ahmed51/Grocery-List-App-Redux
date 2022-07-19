@@ -51,7 +51,12 @@ const GroceryListApp = () => {
         {groceryItem.map((item) =>
           // Getting only items which have purchase true
           !item.purchased ? (
-            <ListItem key={item.id} itemTitle={item.itemTitle} id={++Sno} />
+            <ListItem
+              key={item.id}
+              itemTitle={item.itemTitle}
+              id={item.id}
+              Sno={++Sno}
+            />
           ) : (
             console.log("")
           )

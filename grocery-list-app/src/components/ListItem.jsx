@@ -45,7 +45,7 @@ const Num = styled.div`
   margin-right: 20px;
 `;
 
-const ListItems = ({ itemTitle, id }) => {
+const ListItems = ({ itemTitle, id, Sno }) => {
   const dispatch = useDispatch();
   //Handle Purchase Item
   const handlePurchased = () => {
@@ -60,7 +60,7 @@ const ListItems = ({ itemTitle, id }) => {
   return (
     <Container>
       <ItemText>
-        <Num>{id}. </Num> {itemTitle}
+        <Num>{Sno}. </Num> {itemTitle}
       </ItemText>
       <ButtonPurchased onClick={() => handlePurchased()}>
         <DoneIcon />

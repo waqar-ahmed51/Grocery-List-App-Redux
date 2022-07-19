@@ -1,7 +1,7 @@
 # Grocery-List-App-Redux
   Basic Grocery List App developed with React and Redux - Centralized App State
   
-    I started learning Redux after following some resources online I build this application for practice. This is a basic Grocery List App through which users can add, and remove the items to the list. All components are sharing a single state (known as store in redux). 
+  I started learning Redux after following some resources online I build this application for practice. This is a basic Grocery List App through which users can add, and remove the items to the list. All components are sharing a single state (known as store in redux).
   
   I used react-redux for the practice application.
   

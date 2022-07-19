@@ -29,12 +29,10 @@ const CartNumber = styled.div`
 
 const TotalItems = () => {
   const groceryItem = useSelector((state) => state.groceryItem);
-  console.log("groceryItems", groceryItem);
-
+  // console.log("groceryItems from total items .js", groceryItem);
   return (
     <Container>
       <Text>Total Items to be purchsed from market</Text>
-
       <CartNumber>
         <Badge badgeContent={groceryItem.length} color="primary">
           <ReorderIcon color="action" />

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { addItem } from "../actions/action";
+// import { addItem } from "../actions/action";
 import { useDispatch } from "react-redux";
 
 const Container = styled.div`
@@ -35,13 +35,46 @@ const InputItem = styled.input`
   margin: 0 20px;
   font-size: 25px;
 `;
-
+const MessgaeError = styled.div`
+  color: red;
+  margin-left: 20px;
+  font-size: 15px;
+  display: none;
+`;
 const AddItem = () => {
   const dispatch = useDispatch();
+
+  //Handle Add Item
+  const handleAddItem = (input) => {
+    input = document.getElementById("inputTitle").value;
+    if (input !== "") {
+      dispatch({
+        type: "itemAdded",
+        payload: {
+          itemTitle: input,
+        },
+      });
+      document.getElementById("inputTitle").style.border = "1px solid black";
+      document.getElementById("inputTitle").value = "";
+      document.getElementById("error_msg").style.display = "none";
+    } else {
+      //Ask user to add item title
+      document.getElementById("inputTitle").style.border = "2px solid red";
+      document.getElementById("error_msg").style.display = "flex";
+    }
+  };
+
   return (
     <Container>
-      <InputItem />
-      <AddButton onClick={() => dispatch(addItem())}>ADD</AddButton>
+      <MessgaeError id="error_msg">Type Item Title</MessgaeError>
+      <InputItem id="inputTitle" />
+      <AddButton
+        onClick={() =>
+          handleAddItem(document.getElementById("inputTitle").value)
+        }
+      >
+        ADD
+      </AddButton>
     </Container>
   );
 };

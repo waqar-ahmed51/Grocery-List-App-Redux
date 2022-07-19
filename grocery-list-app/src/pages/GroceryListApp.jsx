@@ -4,6 +4,7 @@ import HeadTitle from "../components/HeadTitle";
 import TotalItems from "../components/TotalItems";
 import AddItem from "../components/AddItem";
 import ListItem from "../components/ListItem";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
   /* background-color: yellowgreen; */
@@ -30,21 +31,29 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 100px 0px;
 `;
+const NoItem = styled.div`
+  font-size: 20px;
+  margin: 10px;
+  color: #484747;
+`;
 
 const GroceryListApp = () => {
+  const groceryItem = useSelector((state) => state.groceryItem);
+  console.log("Grocery Items", groceryItem);
   return (
     <Container>
       <Wrapper>
         <HeadTitle />
         <TotalItems />
         <AddItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
+        {groceryItem.map((item) => (
+          <ListItem key={item.id} itemTitle={item.itemTitle} />
+        ))}
+        {groceryItem.length === 0 ? (
+          <NoItem>No Items in the Grocery List!</NoItem>
+        ) : (
+          console.log("")
+        )}
       </Wrapper>
     </Container>
   );

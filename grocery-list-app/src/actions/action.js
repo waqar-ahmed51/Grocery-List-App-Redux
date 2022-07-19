@@ -1,5 +1,14 @@
-export const addItem=()=>{
+export const addItem=(nu)=>{
     return{
-        type: 'itemAdded'
+        type: 'itemAdded',
+        payload: nu
     };
 };
+export const purchaseItem=()=>{
+    return{
+        type: 'itemPurchased'
+    };
+};
+
+
+

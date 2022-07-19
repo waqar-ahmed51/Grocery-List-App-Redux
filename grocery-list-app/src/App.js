@@ -1,6 +1,8 @@
 import GroceryListApp from "./pages/GroceryListApp";
 
+
 function App() {
+  
   return (
     <GroceryListApp/>
   );

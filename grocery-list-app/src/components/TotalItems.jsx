@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Badge } from "@mui/material";
 import ReorderIcon from "@mui/icons-material/Reorder";
-import { useSelector, useDispatch } from "react-redux";
-import { addItem } from "../actions";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
   width: 70%;
@@ -29,14 +28,15 @@ const CartNumber = styled.div`
 `;
 
 const TotalItems = () => {
-  const groceryItemReducer = useSelector((state) => state.groceryItemReducer);
-  console.log("groceryItems", groceryItemReducer);
+  const groceryItem = useSelector((state) => state.groceryItem);
+  console.log("groceryItems", groceryItem);
+
   return (
     <Container>
       <Text>Total Items to be purchsed from market</Text>
-      <button onClick={() => dispatch(addItem())}>+</button>
+
       <CartNumber>
-        <Badge badgeContent={groceryItemReducer} color="primary">
+        <Badge badgeContent={groceryItem.length} color="primary">
           <ReorderIcon color="action" />
         </Badge>
       </CartNumber>

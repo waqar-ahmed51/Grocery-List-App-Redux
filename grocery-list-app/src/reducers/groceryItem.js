@@ -1,4 +1,4 @@
-const groceryItemReducer = (state = 2, action) => {
+const groceryItemReducer = (state = [], action) => {
     switch(action.type){
         case 'itemAdded':
             return state+1;

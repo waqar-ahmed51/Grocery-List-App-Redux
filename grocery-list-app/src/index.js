@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createStore} from 'redux';
-import groceryItemReducer from './reducers/groceryItem';
+// import groceryItemReducer from './reducers/groceryItem';
 import { Provider } from 'react-redux';
+import allReducers from './reducers/allReducers'
 
-const store = createStore(groceryItemReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+console.log("Index js store", store);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { addItem } from "../actions/action";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div`
   /* background-color: red; */
@@ -35,10 +37,11 @@ const InputItem = styled.input`
 `;
 
 const AddItem = () => {
+  const dispatch = useDispatch();
   return (
     <Container>
       <InputItem />
-      <AddButton>ADD</AddButton>
+      <AddButton onClick={() => dispatch(addItem())}>ADD</AddButton>
     </Container>
   );
 };

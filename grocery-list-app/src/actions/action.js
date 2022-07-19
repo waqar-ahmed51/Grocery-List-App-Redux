@@ -1,14 +1,13 @@
-export const addItem=(nu)=>{
-    return{
-        type: 'itemAdded',
-        payload: nu
-    };
-};
-export const purchaseItem=()=>{
-    return{
-        type: 'itemPurchased'
-    };
-};
+// export const addItem=()=>{
+//     return{
+//         type: 'itemAdded'
+//     };
+// };
+// export const purchaseItem=()=>{
+//     return{
+//         type: 'itemPurchased'
+//     };
+// };
 
 
 

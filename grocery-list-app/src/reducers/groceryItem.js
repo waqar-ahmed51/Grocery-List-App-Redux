@@ -12,7 +12,7 @@ const groceryItemReducer = (state = [], action) => {
                 }
             ]
         case 'itemPurchased':
-            return state-1;
+            return state.filter(item =>item.id !==action.payload.id)
         default:
             return state;
     }

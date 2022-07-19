@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import DoneIcon from "@mui/icons-material/Done";
-import { purchaseItem } from "../actions/action";
+// import { purchaseItem } from "../actions/action";
 import { useDispatch } from "react-redux";
 
 const Container = styled.div`
@@ -40,12 +40,29 @@ const ButtonPurchased = styled.button`
   }
 `;
 
-const ListItems = ({ itemTitle }) => {
+const Num = styled.div`
+  font-size: 20px;
+  margin-right: 20px;
+`;
+
+const ListItems = ({ itemTitle, id }) => {
   const dispatch = useDispatch();
+  //Handle Purchase Item
+  const handlePurchased = () => {
+    dispatch({
+      type: "itemPurchased",
+      payload: {
+        id: id,
+      },
+    });
+  };
+
   return (
     <Container>
-      <ItemText>{itemTitle}</ItemText>
-      <ButtonPurchased onClick={() => dispatch(purchaseItem())}>
+      <ItemText>
+        <Num>{id}. </Num> {itemTitle}
+      </ItemText>
+      <ButtonPurchased onClick={() => handlePurchased()}>
         <DoneIcon />
       </ButtonPurchased>
     </Container>

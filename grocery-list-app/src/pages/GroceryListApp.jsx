@@ -39,16 +39,23 @@ const NoItem = styled.div`
 
 const GroceryListApp = () => {
   const groceryItem = useSelector((state) => state.groceryItem);
-  console.log("Grocery Items", groceryItem);
+  // console.log("Grocery Items", groceryItem);
+  //SNo for products
+  let Sno = 0;
   return (
     <Container>
       <Wrapper>
         <HeadTitle />
         <TotalItems />
         <AddItem />
-        {groceryItem.map((item) => (
-          <ListItem key={item.id} itemTitle={item.itemTitle} />
-        ))}
+        {groceryItem.map((item) =>
+          // Getting only items which have purchase true
+          !item.purchased ? (
+            <ListItem key={item.id} itemTitle={item.itemTitle} id={++Sno} />
+          ) : (
+            console.log("")
+          )
+        )}
         {groceryItem.length === 0 ? (
           <NoItem>No Items in the Grocery List!</NoItem>
         ) : (

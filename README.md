@@ -3,4 +3,4 @@
   
   - App Demo GIF
   
-![Grocery-List-App-Demo-GIF (1)](https://user-images.githubusercontent.com/54082156/179782763-aa823b76-f42c-44b8-99f1-952c9490f076.gif)
+![Grocery-List-App-Final-Demo (1)](https://user-images.githubusercontent.com/54082156/179784334-7d2766e3-ebd3-4423-b2d4-960a690a7399.gif)

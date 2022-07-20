@@ -7,7 +7,8 @@
   
   - App Demo GIF
   
-![Grocery-List-App-Final-Demo (1)](https://user-images.githubusercontent.com/54082156/179784334-7d2766e3-ebd3-4423-b2d4-960a690a7399.gif)
+![Grocery-List-App-Demo-3 0 (1)](https://user-images.githubusercontent.com/54082156/179942655-79aa71e3-c63c-4e22-810d-0c29557203c5.gif)
+
 
 I learned the following concepts and used them in this app. 
 

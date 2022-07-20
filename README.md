@@ -9,7 +9,7 @@
   
 ![Grocery-List-App-Final-Demo (1)](https://user-images.githubusercontent.com/54082156/179784334-7d2766e3-ebd3-4423-b2d4-960a690a7399.gif)
 
-In this tutorial, I learned the following concepts and used them in this app. 
+I learned the following concepts and used them in this app. 
 
   - What is Redux?
   - Use of Redux.
